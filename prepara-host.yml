@@ -1,0 +1,15 @@
+---
+- name: Prepara olam host
+  hosts: olam
+  gather_facts: yes
+  become: true
+
+  tasks:
+    - name: Inclui tasks
+      ansible.builtin.include_tasks:
+        file: "{{ item }}"
+      loop:
+#        - firewall.yml
+#        - habilita-repos.yml
+        - instala-pacotes.yml
+        - configura-postgresql.yml

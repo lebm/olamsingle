@@ -1,0 +1,31 @@
+- name: libera https
+  ansible.posix.firewalld:
+    service: https
+    state: enabled
+    permanent: true
+    immediate: true
+    offline: true
+
+- name: libera http
+  ansible.posix.firewalld:
+    service: http
+    state: enabled
+    permanent: true
+    immediate: true
+    offline: true
+
+- name: libera porta 27199/tcp
+  ansible.posix.firewalld:
+    port: 27199/tcp
+    state: enabled
+    permanent: true
+    immediate: true
+    offline: true
+
+- name: libera porta 5432/tcp
+  ansible.posix.firewalld:
+    port: 5432/tcp
+    state: enabled
+    permanent: true
+    immediate: true
+    offline: true

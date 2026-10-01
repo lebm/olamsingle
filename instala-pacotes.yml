@@ -1,0 +1,19 @@
+- name: Reseta módulo do postgresql
+  ansible.builtin.command:
+    cmd: dnf module reset postgresql -y
+
+- name: Habilta módulo do postgresql:16
+  ansible.builtin.command:
+    cmd: dnf module enable postgresql:16 -y
+
+- name: Instala pacotes
+  ansible.builtin.dnf:
+    name: "{{ olam_pkgs }}"
+    state: present
+  loop:
+    - oraclelinux-automation-manager-release-el9-2.3 
+    - postgresql-server
+    - python3-psycopg2
+  loop_control:
+    loop_var: olam_pkgs
+

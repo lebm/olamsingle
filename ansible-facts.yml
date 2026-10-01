@@ -1,0 +1,10 @@
+---
+- name: Lista ansible_facts
+  hosts: olam
+  gather_facts: yes
+  become: true
+
+  tasks:
+    - debug:
+        var: ansible_facts
+

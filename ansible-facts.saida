@@ -1,0 +1,823 @@
+
+PLAY [Lista ansible_facts] *****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [olam]
+
+TASK [debug] *******************************************************************
+ok: [olam] => {
+    "ansible_facts": {
+        "all_ipv4_addresses": [
+            "192.168.9.16"
+        ],
+        "all_ipv6_addresses": [
+            "fd7b:f8ef:a5ad:40e8:5054:ff:fe80:7636",
+            "fe80::5054:ff:fe80:7636"
+        ],
+        "ansible_local": {},
+        "apparmor": {
+            "status": "disabled"
+        },
+        "architecture": "x86_64",
+        "bios_date": "04/01/2014",
+        "bios_vendor": "SeaBIOS",
+        "bios_version": "Arch Linux 1.17.0-2-2",
+        "board_asset_tag": "NA",
+        "board_name": "NA",
+        "board_serial": "NA",
+        "board_vendor": "NA",
+        "board_version": "NA",
+        "chassis_asset_tag": "NA",
+        "chassis_serial": "NA",
+        "chassis_vendor": "QEMU",
+        "chassis_version": "pc-q35-11.1",
+        "cmdline": {
+            "BOOT_IMAGE": "(hd0,msdos1)/vmlinuz-6.12.0-206.104.4.4.el9uek.x86_64",
+            "console": "ttyS0,115200n8",
+            "crashkernel": "1G-64G:448M,64G-:512M",
+            "rd.lvm.lv": "ol_miwifi-ra72-srv/swap",
+            "resume": "/dev/mapper/ol_miwifi--ra72--srv-swap",
+            "rhgb": true,
+            "ro": true,
+            "root": "/dev/mapper/ol_miwifi--ra72--srv-root"
+        },
+        "date_time": {
+            "date": "2026-10-01",
+            "day": "01",
+            "epoch": "1790877772",
+            "epoch_int": "1790877772",
+            "hour": "15",
+            "iso8601": "2026-10-01T18:02:52Z",
+            "iso8601_basic": "20261001T150252494925",
+            "iso8601_basic_short": "20261001T150252",
+            "iso8601_micro": "2026-10-01T18:02:52.494925Z",
+            "minute": "02",
+            "month": "10",
+            "second": "52",
+            "time": "15:02:52",
+            "tz": "-03",
+            "tz_dst": "-03",
+            "tz_offset": "-0300",
+            "weekday": "Thursday",
+            "weekday_number": "4",
+            "weeknumber": "39",
+            "year": "2026"
+        },
+        "default_ipv4": {
+            "address": "192.168.9.16",
+            "alias": "enp1s0",
+            "broadcast": "192.168.9.255",
+            "gateway": "192.168.9.1",
+            "interface": "enp1s0",
+            "macaddress": "52:54:00:80:76:36",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "192.168.9.0",
+            "prefix": "24",
+            "type": "ether"
+        },
+        "default_ipv6": {},
+        "device_links": {
+            "ids": {
+                "dm-0": [
+                    "dm-name-ol_miwifi--ra72--srv-root",
+                    "dm-uuid-LVM-jReFLArk6DnT0LS7etUF65g3fgtH5bWKPuRB5Ycvz5iyQHAJnkeD8XsFDUrBBUZ9"
+                ],
+                "dm-1": [
+                    "dm-name-ol_miwifi--ra72--srv-swap",
+                    "dm-uuid-LVM-jReFLArk6DnT0LS7etUF65g3fgtH5bWKHifftdGNlK2XAVoX1hgQvrptW82VdGHi"
+                ],
+                "sr0": [
+                    "ata-QEMU_DVD-ROM_QM00001"
+                ],
+                "vda2": [
+                    "lvm-pv-uuid-BJFsdy-g13j-f08l-1z4M-a216-j80D-W07qjg"
+                ]
+            },
+            "labels": {},
+            "masters": {
+                "vda2": [
+                    "dm-0",
+                    "dm-1"
+                ]
+            },
+            "uuids": {
+                "dm-0": [
+                    "78482cd4-6d96-4ba9-ae7e-8a9961510809"
+                ],
+                "dm-1": [
+                    "369cc600-fd79-4827-8f84-56d5e4829ec5"
+                ],
+                "vda1": [
+                    "c86c485e-cc90-4d31-9a6a-275c338887c7"
+                ]
+            }
+        },
+        "devices": {
+            "dm-0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "dm-name-ol_miwifi--ra72--srv-root",
+                        "dm-uuid-LVM-jReFLArk6DnT0LS7etUF65g3fgtH5bWKPuRB5Ycvz5iyQHAJnkeD8XsFDUrBBUZ9"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": [
+                        "78482cd4-6d96-4ba9-ae7e-8a9961510809"
+                    ]
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "",
+                "sectors": 73506816,
+                "sectorsize": "512",
+                "size": "35.05 GB",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "dm-1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "dm-name-ol_miwifi--ra72--srv-swap",
+                        "dm-uuid-LVM-jReFLArk6DnT0LS7etUF65g3fgtH5bWKHifftdGNlK2XAVoX1hgQvrptW82VdGHi"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": [
+                        "369cc600-fd79-4827-8f84-56d5e4829ec5"
+                    ]
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "",
+                "sectors": 8273920,
+                "sectorsize": "512",
+                "size": "3.95 GB",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sr0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "ata-QEMU_DVD-ROM_QM00001"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "QEMU DVD-ROM",
+                "partitions": {},
+                "removable": "1",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": 2097151,
+                "sectorsize": "512",
+                "size": "1024.00 MB",
+                "support_discard": "0",
+                "vendor": "QEMU",
+                "virtual": 1
+            },
+            "vda": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {
+                    "vda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "c86c485e-cc90-4d31-9a6a-275c338887c7"
+                            ]
+                        },
+                        "sectors": 2097152,
+                        "sectorsize": 512,
+                        "size": "1.00 GB",
+                        "start": "2048",
+                        "uuid": "c86c485e-cc90-4d31-9a6a-275c338887c7"
+                    },
+                    "vda2": {
+                        "holders": [
+                            "ol_miwifi--ra72--srv-swap",
+                            "ol_miwifi--ra72--srv-root"
+                        ],
+                        "links": {
+                            "ids": [
+                                "lvm-pv-uuid-BJFsdy-g13j-f08l-1z4M-a216-j80D-W07qjg"
+                            ],
+                            "labels": [],
+                            "masters": [
+                                "dm-0",
+                                "dm-1"
+                            ],
+                            "uuids": []
+                        },
+                        "sectors": 81786880,
+                        "sectorsize": 512,
+                        "size": "39.00 GB",
+                        "start": "2099200",
+                        "uuid": null
+                    }
+                },
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": 83886080,
+                "sectorsize": "512",
+                "size": "40.00 GB",
+                "support_discard": "512",
+                "vendor": "0x1af4",
+                "virtual": 1
+            }
+        },
+        "discovered_interpreter_python": "/usr/bin/python3.9",
+        "distribution": "OracleLinux",
+        "distribution_file_parsed": true,
+        "distribution_file_path": "/etc/oracle-release",
+        "distribution_file_search_string": "Oracle Linux",
+        "distribution_file_variety": "OracleLinux",
+        "distribution_major_version": "9",
+        "distribution_release": "NA",
+        "distribution_version": "9.8",
+        "dns": {
+            "nameservers": [
+                "192.168.9.1"
+            ]
+        },
+        "domain": "",
+        "effective_group_id": 0,
+        "effective_user_id": 0,
+        "enp1s0": {
+            "active": true,
+            "device": "enp1s0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "on",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "on [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "on [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "192.168.9.16",
+                "broadcast": "192.168.9.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.9.0",
+                "prefix": "24"
+            },
+            "ipv6": [
+                {
+                    "address": "fd7b:f8ef:a5ad:40e8:5054:ff:fe80:7636",
+                    "prefix": "64",
+                    "scope": "global"
+                },
+                {
+                    "address": "fe80::5054:ff:fe80:7636",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "52:54:00:80:76:36",
+            "module": "virtio_net",
+            "mtu": 1500,
+            "pciid": "virtio0",
+            "promisc": false,
+            "speed": -1,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "env": {
+            "HOME": "/root",
+            "LANG": "en_US.UTF-8",
+            "LOGNAME": "root",
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:",
+            "MAIL": "/var/mail/root",
+            "PATH": "/sbin:/bin:/usr/sbin:/usr/bin",
+            "PWD": "/home/bravo",
+            "SHELL": "/bin/bash",
+            "SHLVL": "0",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ymsxlrrcibldtljssmudhtboiiribwlg ; /usr/bin/python3.9 /home/bravo/.ansible/tmp/ansible-tmp-1790877772.1856358-66031-231546867224132/AnsiballZ_setup.py",
+            "SUDO_GID": "1000",
+            "SUDO_HOME": "/home/bravo",
+            "SUDO_TTY": "/dev/pts/0",
+            "SUDO_UID": "1000",
+            "SUDO_USER": "bravo",
+            "TERM": "tmux-256color",
+            "USER": "root",
+            "_": "/usr/bin/python3.9"
+        },
+        "fibre_channel_wwn": [],
+        "fips": false,
+        "flags": [
+            "fpu",
+            "vme",
+            "de",
+            "pse",
+            "tsc",
+            "msr",
+            "pae",
+            "mce",
+            "cx8",
+            "apic",
+            "sep",
+            "mtrr",
+            "pge",
+            "mca",
+            "cmov",
+            "pat",
+            "pse36",
+            "clflush",
+            "mmx",
+            "fxsr",
+            "sse",
+            "sse2",
+            "ss",
+            "syscall",
+            "nx",
+            "pdpe1gb",
+            "rdtscp",
+            "lm",
+            "constant_tsc",
+            "rep_good",
+            "nopl",
+            "xtopology",
+            "cpuid",
+            "tsc_known_freq",
+            "pni",
+            "pclmulqdq",
+            "vmx",
+            "ssse3",
+            "fma",
+            "cx16",
+            "pcid",
+            "sse4_1",
+            "sse4_2",
+            "x2apic",
+            "movbe",
+            "popcnt",
+            "tsc_deadline_timer",
+            "aes",
+            "xsave",
+            "avx",
+            "f16c",
+            "rdrand",
+            "hypervisor",
+            "lahf_lm",
+            "abm",
+            "3dnowprefetch",
+            "cpuid_fault",
+            "ssbd",
+            "ibrs",
+            "ibpb",
+            "stibp",
+            "ibrs_enhanced",
+            "tpr_shadow",
+            "flexpriority",
+            "ept",
+            "vpid",
+            "ept_ad",
+            "fsgsbase",
+            "tsc_adjust",
+            "bmi1",
+            "avx2",
+            "smep",
+            "bmi2",
+            "erms",
+            "invpcid",
+            "rdseed",
+            "adx",
+            "smap",
+            "clflushopt",
+            "clwb",
+            "sha_ni",
+            "xsaveopt",
+            "xsavec",
+            "xgetbv1",
+            "xsaves",
+            "user_shstk",
+            "avx_vnni",
+            "arat",
+            "vnmi",
+            "umip",
+            "pku",
+            "ospke",
+            "waitpkg",
+            "gfni",
+            "vaes",
+            "vpclmulqdq",
+            "rdpid",
+            "movdiri",
+            "movdir64b",
+            "fsrm",
+            "md_clear",
+            "serialize",
+            "ibt",
+            "flush_l1d",
+            "arch_capabilities"
+        ],
+        "form_factor": "Other",
+        "fqdn": "olam",
+        "gather_subset": [
+            "all"
+        ],
+        "hostname": "olam",
+        "hostnqn": "nqn.2014-08.org.nvmexpress:uuid:49c564e0-2bde-4044-9853-e29f85aa8d4f",
+        "interfaces": [
+            "enp1s0",
+            "lo"
+        ],
+        "is_chroot": false,
+        "iscsi_iqn": "",
+        "kernel": "6.12.0-206.104.4.4.el9uek.x86_64",
+        "kernel_version": "#2 SMP PREEMPT_DYNAMIC Wed Sep 16 22:06:01 PDT 2026",
+        "lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "on",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0",
+                "prefix": "8"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [],
+            "type": "loopback"
+        },
+        "loadavg": {
+            "15m": 0.0,
+            "1m": 0.0,
+            "5m": 0.0
+        },
+        "locally_reachable_ips": {
+            "ipv4": [
+                "127.0.0.0/8",
+                "127.0.0.1",
+                "192.168.9.16"
+            ],
+            "ipv6": [
+                "::1",
+                "fd7b:f8ef:a5ad:40e8:5054:ff:fe80:7636",
+                "fe80::5054:ff:fe80:7636"
+            ]
+        },
+        "lsb": {},
+        "lvm": {
+            "lvs": {
+                "root": {
+                    "size_g": "35.05",
+                    "vg": "ol_miwifi-ra72-srv"
+                },
+                "swap": {
+                    "size_g": "3.95",
+                    "vg": "ol_miwifi-ra72-srv"
+                }
+            },
+            "pvs": {
+                "/dev/vda2": {
+                    "free_g": "0",
+                    "size_g": "39.00",
+                    "vg": "ol_miwifi-ra72-srv"
+                }
+            },
+            "vgs": {
+                "ol_miwifi-ra72-srv": {
+                    "free_g": "0",
+                    "lvs": {
+                        "root": {
+                            "size_g": "35.05"
+                        },
+                        "swap": {
+                            "size_g": "3.95"
+                        }
+                    },
+                    "num_lvs": "2",
+                    "num_pvs": "1",
+                    "size_g": "39.00"
+                }
+            }
+        },
+        "machine": "x86_64",
+        "machine_id": "a35e66ea75c44a9799caae6f674e02e8",
+        "memfree_mb": 2847,
+        "memory_mb": {
+            "nocache": {
+                "free": 3234,
+                "used": 223
+            },
+            "real": {
+                "free": 2847,
+                "total": 3457,
+                "used": 610
+            },
+            "swap": {
+                "cached": 0,
+                "free": 4039,
+                "total": 4039,
+                "used": 0
+            }
+        },
+        "memtotal_mb": 3457,
+        "module_setup": true,
+        "mounts": [
+            {
+                "block_available": 8451986,
+                "block_size": 4096,
+                "block_total": 9171968,
+                "block_used": 719982,
+                "device": "/dev/mapper/ol_miwifi--ra72--srv-root",
+                "dump": 0,
+                "fstype": "xfs",
+                "inode_available": 18328859,
+                "inode_total": 18376704,
+                "inode_used": 47845,
+                "mount": "/",
+                "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                "passno": 0,
+                "size_available": 34619334656,
+                "size_total": 37568380928,
+                "uuid": "78482cd4-6d96-4ba9-ae7e-8a9961510809"
+            },
+            {
+                "block_available": 100211,
+                "block_size": 4096,
+                "block_total": 245760,
+                "block_used": 145549,
+                "device": "/dev/vda1",
+                "dump": 0,
+                "fstype": "xfs",
+                "inode_available": 523897,
+                "inode_total": 524288,
+                "inode_used": 391,
+                "mount": "/boot",
+                "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                "passno": 0,
+                "size_available": 410464256,
+                "size_total": 1006632960,
+                "uuid": "c86c485e-cc90-4d31-9a6a-275c338887c7"
+            }
+        ],
+        "nodename": "olam",
+        "os_family": "RedHat",
+        "pkg_mgr": "dnf",
+        "proc_cmdline": {
+            "BOOT_IMAGE": "(hd0,msdos1)/vmlinuz-6.12.0-206.104.4.4.el9uek.x86_64",
+            "console": [
+                "tty0",
+                "ttyS0,115200n8"
+            ],
+            "crashkernel": "1G-64G:448M,64G-:512M",
+            "rd.lvm.lv": [
+                "ol_miwifi-ra72-srv/root",
+                "ol_miwifi-ra72-srv/swap"
+            ],
+            "resume": "/dev/mapper/ol_miwifi--ra72--srv-swap",
+            "rhgb": true,
+            "ro": true,
+            "root": "/dev/mapper/ol_miwifi--ra72--srv-root"
+        },
+        "processor": [
+            "0",
+            "GenuineIntel",
+            "13th Gen Intel(R) Core(TM) i7-13700",
+            "1",
+            "GenuineIntel",
+            "13th Gen Intel(R) Core(TM) i7-13700"
+        ],
+        "processor_cores": 1,
+        "processor_count": 2,
+        "processor_nproc": 2,
+        "processor_threads_per_core": 1,
+        "processor_vcpus": 2,
+        "product_name": "Standard PC (Q35 + ICH9, 2009)",
+        "product_serial": "NA",
+        "product_uuid": "49c564e0-2bde-4044-9853-e29f85aa8d4f",
+        "product_version": "pc-q35-11.1",
+        "python": {
+            "executable": "/usr/bin/python3.9",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 25,
+                "minor": 9,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                9,
+                25,
+                "final",
+                0
+            ]
+        },
+        "python_version": "3.9.25",
+        "real_group_id": 0,
+        "real_user_id": 0,
+        "selinux": {
+            "config_mode": "enforcing",
+            "mode": "enforcing",
+            "policyvers": 33,
+            "status": "enabled",
+            "type": "targeted"
+        },
+        "selinux_python_present": true,
+        "service_mgr": "systemd",
+        "ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGL3N+yvs37O/78uIJu12201H2yj0W2As8aSUDxaY35wHw5upDSCNv9zDpz9J12IYE2u0P+kTjrQYTvVBkE8N5U=",
+        "ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIECDaDUJlunomzKGYTt1hOFvAOOGr4SwY/7FzeeH7k5w",
+        "ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCinzwDrujdUErtO8N77CRdg+aa73+As0elck8hOzH50YqWya3KlI/l3URuiimi9fGi9DJQ+k4FZm35RKTFxzuMtlZjUn01MbqXCXZoiDCeNG1a6xipCRNF6izXFM++S2g/19+/lcEEvAEftXs91eUlXT0TBW3mX3DgR7lvFbujQk6C2YrTSmPg723suf0ARhpTnCMudolJnCDYQmHJSMqjAcAOHsE7aYPwPKHwWJWYH1uAWCJVF9XubXde2uVtzPAcRiYLU8IaWNziqch+982w/lUytDKXnnYXcTrUdLnaDmffW8dhOSs09WzOAzU7QtGpM5DPwx3c4TG32SUB+xLaFMLJepWJxGKdQl88cimZOkU2YQzqiWhwk570e/c/u3sra90Ob9zqYbOvHFe7FvjX5UEuFKxJgWAx28F3lnVyMhrGtcBIPJpMMn2rvf1RY/eCucIvEWq9WGy9WKFCppWKOxWCCmpPU06i8qi4Qm9oomSc67QtXjkoP49UAU5Sskc=",
+        "ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "swapfree_mb": 4039,
+        "swaptotal_mb": 4039,
+        "system": "Linux",
+        "system_capabilities": [],
+        "system_capabilities_enforced": "False",
+        "system_vendor": "QEMU",
+        "systemd": {
+            "features": "+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified",
+            "version": 252
+        },
+        "uptime_seconds": 4271,
+        "user_dir": "/root",
+        "user_gecos": "root",
+        "user_gid": 0,
+        "user_id": "root",
+        "user_shell": "/bin/bash",
+        "user_uid": 0,
+        "userspace_architecture": "x86_64",
+        "userspace_bits": "64",
+        "virtualization_role": "guest",
+        "virtualization_tech_guest": [
+            "kvm"
+        ],
+        "virtualization_tech_host": [
+            "kvm"
+        ],
+        "virtualization_type": "kvm"
+    }
+}
+
+PLAY RECAP *********************************************************************
+olam                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

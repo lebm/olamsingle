@@ -1,0 +1,16 @@
+- name: Habilitar repositórios Oracle Linux 9
+  ansible.builtin.command:
+    cmd: dnf config-manager --set-enabled {{ ol9_repo }}
+  become: true
+  loop:
+    - ol9_addons
+    - ol9_UEKR8
+    - ol9_appstream
+    - ol9_baseos_latest
+  loop_control:
+    loop_var: ol9_repo
+  register: repo_enable
+  changed_when: "'enabled' in repo_enable.stdout | lower"
+
+- debug:
+    var: repo_enable
