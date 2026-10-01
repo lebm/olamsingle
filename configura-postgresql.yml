@@ -18,6 +18,15 @@
         regexp: '^#?password_encryption.*'
         line: 'password_encryption = scram-sha-256'
 
+    - name: Configura permissão de acesso 
+      ansible.builtin.blockinfile:
+        path: /var/lib/pgsql/data/pg_hba.conf
+        marker: "# {mark} Configuração de permissão de acesso. Não altere manualmente."
+        insertbefore: BOF
+        block: |
+          # TYPE DATABASE    USER      ADDRESS         METHOD 
+          host   all         all       0.0.0.0/0       scram-sha-256 
+
     - name: Habilitar e iniciar o serviço do PostgreSQL
       ansible.builtin.systemd_service:
         name: postgresql
@@ -38,6 +47,14 @@
         role_attr_flags: NOSUPERUSER
         state: present
       no_log: true
+
+    - name: Criar banco awx
+      become: true
+      become_user: postgres
+      community.postgresql.postgresql_db:
+        name: awx
+        owner: awx
+        state: present
 
 
 
